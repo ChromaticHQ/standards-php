@@ -1,0 +1,8 @@
+---
+version: 1
+updates:
+  - package-ecosystem: composer
+    directory: "/"
+    versioning-strategy: auto
+  - package-ecosystem: github-actions
+    directory: "/"

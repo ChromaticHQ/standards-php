@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ruleset name="Chromatic"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+
+    <description>The Chromatic PHP coding standard.</description>
+
+    <!-- see ../../README.md -->
+
+</ruleset>
