@@ -13,13 +13,13 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Parses and verifies that todo comments have an associated ticket reference.
+ * Verifies that todo comments use the correct format.
  *
  * @category PHP
  * @package  PHP_CodeSniffer
  * @link     http://pear.php.net/package/PHP_CodeSniffer
  */
-class TodoTicketReferenceCommentSniff implements Sniff
+class TodoFormatCommentSniff implements Sniff
 {
 
 
@@ -50,9 +50,9 @@ class TodoTicketReferenceCommentSniff implements Sniff
     public function process(File $phpcsFile, $stackPtr)
     {
         $tokens     = $phpcsFile->getTokens();
-        $expression = '/@todo(?::| )(?:(?!((http|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?)).)*$/mi';
+        $expression = '/(?i)(?=(@to(-|)do))(?-i)(?!@todo)/m';
         if ((bool) preg_match($expression, $tokens[$stackPtr]['content']) === true) {
-            $phpcsFile->addError('@todo comments require a ticket reference', $stackPtr, 'TodoTicketReference');
+            $phpcsFile->addError('@todo comments should be in the "@todo" format.', $stackPtr, 'TodoFormat');
         }
 
     }//end process()
