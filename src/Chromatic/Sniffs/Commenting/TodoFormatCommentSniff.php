@@ -13,7 +13,7 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Verifies that @todo comments use the correct format.
+ * Verifies that todo comments use the correct format.
  *
  * @category PHP
  * @package  PHP_CodeSniffer
