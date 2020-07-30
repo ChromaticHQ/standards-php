@@ -52,7 +52,7 @@ class TodoTicketReferenceCommentSniff implements Sniff
         $tokens     = $phpcsFile->getTokens();
         $expression = '/@todo(?::| )(?:(?!((http|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?)).)*$/mi';
         if ((bool) preg_match($expression, $tokens[$stackPtr]['content']) === true) {
-            $phpcsFile->addError('TODO comments require a ticket reference', $stackPtr, 'TodoTicketReference');
+            $phpcsFile->addError('@todo comments require a ticket reference', $stackPtr, 'TodoTicketReference');
         }
 
     }//end process()
