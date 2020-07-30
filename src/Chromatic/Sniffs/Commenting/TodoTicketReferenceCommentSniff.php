@@ -13,7 +13,7 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Parses and verifies that comments use gender neutral language.
+ * Parses and verifies that todo comments have an associated ticket reference.
  *
  * @category PHP
  * @package  PHP_CodeSniffer
